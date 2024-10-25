@@ -1,4 +1,4 @@
-import { SC_VERSION } from '../constants';
+import { SC_ATTR, SC_VERSION } from '../constants';
 import StyleSheet from '../sheet';
 import { ExecutionContext, RuleSet, Stringifier } from '../types';
 import flatten from '../utils/flatten';
@@ -7,7 +7,7 @@ import { hash, phash } from '../utils/hash';
 import isStaticRules from '../utils/isStaticRules';
 import { joinStringArray, joinStrings } from '../utils/joinStrings';
 
-const SEED = hash(SC_VERSION);
+const SEED = hash(SC_VERSION + SC_ATTR);
 
 /**
  * ComponentStyle is all the CSS-specific stuff, not the React-specific stuff.
